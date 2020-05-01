@@ -1,11 +1,26 @@
 <?php
 
+
+Route::get('website', function () {
+    return view('website.index');
+});
+Route::get('objetivo', function () {
+    return view('website.objetivo');
+});
+Route::get('meta', function () {
+    return view('website.meta');
+});
+
+
 /**
  * Authentication
  */
 Route::get('login', 'Auth\LoginController@show');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('auth.logout');
+
+
+
 
 Route::group(['middleware' => ['registration', 'guest']], function () {
     Route::get('register', 'Auth\RegisterController@show');
@@ -44,6 +59,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      */
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
+
+
 
     /**
      * User Profile
