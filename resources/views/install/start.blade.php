@@ -5,7 +5,7 @@
     @include('install.steps', ['steps' => ['welcome' => 'selected']])
 
     <div class="step-content">
-        <h3>Welcome</h3>
+        <h3>Bienvenido</h3>
         <hr>
         <p>This steps will guide you through few step installation process.</p>
         <p>When this installation process is finished, you will be able

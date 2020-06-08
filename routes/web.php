@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Website (temporal - testing template)
+ */
 
 Route::get('website', function () {
     return view('website.index');
